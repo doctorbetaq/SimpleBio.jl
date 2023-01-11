@@ -1,4 +1,4 @@
-name = "BioToolsLite"
+name = "SimpleBio"
 uuid = "bb9ac2cf-a81a-4446-90a2-0061b7feadf4"
 authors = ["Han H. Pang <hanpang013@gmail.com>"]
 version = "0.1.0"
