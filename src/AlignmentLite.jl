@@ -1,6 +1,6 @@
 # __precompile__()
 
-module AlignmentLite
+module BioToolsLite
 
     export 
     #seqidentiy
@@ -15,4 +15,4 @@ module AlignmentLite
 
     include("seqidentiy.jl")
 
-end # module Alignmentlite
+end # module BioToolsLite
