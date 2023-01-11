@@ -1,5 +1,5 @@
-# AlignmentLite.jl
-[![license](https://img.shields.io/github/license/doctorbetaq/AlignmentLite.jl)](https://github.com/doctorbetaq/AlignmentLite.jl/blob/main/LICENSE)
+# BioToolsLite.jl
+[![license](https://img.shields.io/github/license/doctorbetaq/BioToolsLite.jl)](https://github.com/doctorbetaq/BioToolsLite.jl/blob/main/LICENSE)
 
 ##This package still in-development, it is not ready for use!
 
