@@ -1,5 +1,5 @@
-# AlignmentLite.jl
+# SimpleBio.jl
 
-Documentation for AlignmentLite.jl
+Documentation for SimpleBio.jl
 
 
