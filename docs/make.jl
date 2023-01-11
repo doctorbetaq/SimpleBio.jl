@@ -1,15 +1,17 @@
 push!(LOAD_PATH,"../src/")
 import Pkg
 using Documenter
-using BioToolsLite
+using SimpleBio
 
 makedocs(
-    sitename = "BioToolsLite",
+    sitename = "SimpleBio",
     format = Documenter.HTML(),
-    modules = [BioToolsLite],
+    modules = [SimpleBio],
     pages = [
         "Home" => "index.md",
         "Identification" => "identify.md",
+        "nucleotide tools" => "nucleotidetools.md",
+        "Alignments" => "alignments.md",
         "API references" => "references.md"
     ]
 )
