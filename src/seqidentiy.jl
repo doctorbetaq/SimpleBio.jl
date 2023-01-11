@@ -1,4 +1,5 @@
 """
+    IsDNA()
 Identify is a sequence is DNA sequence in string type.
 """
 function IsDNA(x::String)
@@ -23,6 +24,7 @@ function IsDNA(x::String)
 end
 
 """
+    IsRNA
 Identify is a sequence is RNA sequence in string type.
 """
 function IsRNA(x::String)
@@ -46,10 +48,3 @@ function IsRNA(x::String)
         return true
     end
 end
-
-# s = "GAATTC"
-# IsDNA(s)
-
-
-# r= "GUUggggAA"
-# IsRNA(r)
