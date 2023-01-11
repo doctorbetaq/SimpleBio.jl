@@ -1,5 +1,5 @@
 using Test
-using AlignmentLite
+using SimpleBio
 
 dnatest = "GAATTCGAATTC"
 rnatest = "GUUAGUUC"
@@ -13,4 +13,3 @@ non = "KKYOOPKKYOOP"
     @test IsRNA(rnatest) == true
     @test IsRNA(non) == false
 end
-
