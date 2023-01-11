@@ -1,12 +1,12 @@
 push!(LOAD_PATH,"../src/")
 import Pkg
 using Documenter
-using AlignmentLite
+using BioToolsLite
 
 makedocs(
-    sitename = "AlignmentLite",
+    sitename = "BioToolsLite",
     format = Documenter.HTML(),
-    modules = [AlignmentLite],
+    modules = [BioToolsLite],
     pages = [
         "Home" => "index.md",
         "Identification" => "identify.md",
