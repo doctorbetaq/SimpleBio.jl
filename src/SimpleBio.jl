@@ -1,6 +1,4 @@
 module SimpleBio
-
-
     export 
         #seqidentiy
             IsDNA,
