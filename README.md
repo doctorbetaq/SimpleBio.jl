@@ -1,6 +1,6 @@
 # SimpleBio.jl
 [![license](https://img.shields.io/github/license/doctorbetaq/SimpleBio.jl?style=flat-square)](https://github.com/doctorbetaq/SimpleBio.jl/blob/main/LICENSE)
-
+[![build](https://img.shields.io/circleci/build/github/doctorbetaq/SimpleBio.jl/main)](https://app.circleci.com/pipelines/github/doctorbetaq/SimpleBio.jl)
 
 --biological sequences in simple text way!
   
