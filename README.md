@@ -5,7 +5,7 @@
   
 Package developed by doctorbetaq.
     
-# !!This package is currently under development and testing , it is not ready for production.!!
+!!This package is currently under development and testing , it is not ready for production.!!
 
 
 
