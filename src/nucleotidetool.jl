@@ -1,5 +1,5 @@
 # include("seqidentiy.jl")
-
+using Random
 
 """
     Transcript(x::String)
@@ -106,3 +106,102 @@ function RTanscript(x::String)
     end
     replace(rna1, 'U'=>'T')
 end
+
+"""
+    RandSeq(type::String, length::Int64)
+Generate random sequence of select type (RNA, DNA or aminoacid).
+Acceptable parameters of type: 
+DNA: ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
+RNA: ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
+amino acid: ["AminoAcid", "aminoacid", "amino acid", "peptide", "aa", "AA"]
+"""
+
+function RandSeq(type::String, length::Int64)
+    if type in ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
+        seqout = join(rand(['A','T','C','G'], length))
+        println("""
+        Generated one random RNA sequence:
+        sequence: 5'-$seqout-3'
+        """)
+    elseif type in ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
+        seqout = join(rand(['A','U','C','G'], length))
+        println("""
+        Generated one random DNA sequence:
+        sequence: 5'-$seqout-3'
+        """)
+    elseif type in ["AminoAcid", "aminoacid", "amino acid", "peptide", "aa", "AA"]
+        seqout = join(rand(['A','R','N','D','C','Q','E','G','H','I','L','K','M','F','P','S','T','W','Y','V'], length))
+        println("""
+        Generated one random amino acid peptide chain sequence:
+        sequence: 5'-$seqout-3'
+        """)
+    end
+    return seqout
+end
+
+
+"""
+    RandSeq(type::String, length::Int64)
+Generate inputted numbers of random sequence of select type (RNA, DNA or aminoacid).
+Acceptable parameters of type: 
+DNA: ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
+RNA: ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
+amino acid: ["AminoAcid", "aminoacid", "amino acid", "peptide", "aa", "AA"]
+"""
+function RandSeq(type::String, length::Int64, num::Int64)
+    x = 1
+    out = []
+    for x in 1:num
+        if type in ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
+            seqout = join(rand(['A','T','C','G'], length))
+            push!(out, seqout)
+            x+=1
+        elseif type in ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
+            seqout = join(rand(['A','U','C','G'], length))
+            push!(out, seqout)
+            x+=1
+        elseif type in ["AminoAcid", "aminoacid", "amino acid", "peptide", "aa", "AA"]
+            seqout = join(rand(['A','R','N','D','C','Q','E','G','H','I','L','K','M','F','P','S','T','W','Y','V'], length))
+            push!(out, seqout)
+            x+=1
+        end
+    end
+    jo=join(out, "\n")
+    println("""
+        Generated $num random $type sequences:
+        sequences (5'-3"): 
+        $jo""")
+end
+
+function RandSeq(operator::Int64, type::String, length::Int64, num::Int64)
+    x = 1
+    out = []
+    for x in 1:num
+        if type in ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
+            seqout = join(rand(['A','T','C','G'], length))
+            push!(out, seqout)
+            x+=1
+        elseif type in ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
+            seqout = join(rand(['A','U','C','G'], length))
+            push!(out, seqout)
+            x+=1
+        elseif type in ["AminoAcid", "aminoacid", "amino acid", "peptide", "aa", "AA"]
+            seqout = join(rand(['A','R','N','D','C','Q','E','G','H','I','L','K','M','F','P','S','T','W','Y','V'], length))
+            push!(out, seqout)
+            x+=1
+        end
+    end
+    jo=join(out, "\n")
+    if operator == 1
+        println("Generated $num random $type sequences:")
+        return out
+    else
+        println("""
+        Generated $num random $type sequences:
+        sequences (5'-3"): 
+        $jo""")
+        @warn "Type RandSeq(operator, type, length, number) with operator = 1 to get the array return!"
+    end
+end
+
+# RandSeq(0, "DNA", 10,10)
