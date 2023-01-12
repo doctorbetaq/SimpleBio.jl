@@ -33,4 +33,9 @@ steps:
   -checkout
   -run:
     name: "Install and Test"
-    commmand: Julia -e 'using Pkg; Pkg.update();Pkg.clone("https://github.com/doctorbetaq/SimpleBio.jl");Pkg.Build("SimpleBio"); Pkg.test("SimpleBio")'
+    commmand: "julia -e 'using Pkg; Pkg.update();Pkg.clone("https://github.com/doctorbetaq/SimpleBio.jl");Pkg.Build("SimpleBio"); Pkg.test("SimpleBio")'"
+
+workflows:
+  build:
+    jobs:
+     -Install-and-Test
