@@ -33,7 +33,7 @@ jobs:
       - checkout
       - run:
           name: Install
-          command: julia -e 'using Pkg; Pkg.update();Pkg.add("https://github.com/doctorbetaq/SimpleBio.jl");Pkg.Build("SimpleBio"); Pkg.test("SimpleBio")'
+          command: julia -e 'using Pkg; Pkg.update();Pkg.add(url="https://github.com/doctorbetaq/SimpleBio.jl");Pkg.Build("SimpleBio"); Pkg.test("SimpleBio")'
 
 workflows:
   build:
