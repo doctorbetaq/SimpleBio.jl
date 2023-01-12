@@ -20,7 +20,7 @@ makedocs(
 # See "Hosting Documentation" and deploydocs() in the Documenter manual
 # for more information.
 deploydocs(
-    repo = "github.com/doctorbetaq/SimpleBio.jl.git",
+    repo = "github.com/doctorbetaq/SimpleBio.jl",
     devbranch = "main",
     push_preview = true
 )
