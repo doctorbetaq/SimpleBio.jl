@@ -3,6 +3,7 @@ using SimpleBio
 using BioAlignments
 using BioSequences
 
+#set test variables
 dnatest = "GAATTCGAATTC"
 rnatest = "GUUAGUAAGGUC"
 non = "KKYOOPKKYOOP"
