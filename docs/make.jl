@@ -9,10 +9,6 @@ makedocs(
     modules = [SimpleBio],
     pages = [
         "Home" => "index.md",
-        "Identification" => "identify.md",
-        "nucleotide tools" => "nucleotidetools.md",
-        "Alignments" => "alignments.md",
-        "API references" => "references.md"
     ]
 )
 
