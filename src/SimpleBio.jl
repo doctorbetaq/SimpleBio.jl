@@ -1,12 +1,12 @@
 """
     SimpleBio.jl 
---biological sequences in simple text way!
-Package developed by doctorbetaq.
+    --biological sequences in simple text way!
+    Package developed by doctorbetaq.
 !!This package is currently under development and testing , it is not ready for production.!!
 
-=========
-Features:
-=========
+    =========
+    Features:
+    =========
 + Sequence identification for DNA or RNA. (IsDNA, IsRNA functions)
 + Work with nucleotides:
     *Transcription (xTranscript) for transcription of DNA to RNA (xTranscript for DNA with nucleobase not ATCG.)
