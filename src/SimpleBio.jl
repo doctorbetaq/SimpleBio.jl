@@ -12,6 +12,7 @@ module SimpleBio
             DNArc,
             RNArc,
             RTanscript, 
+            RandSeq,
         
         #alignment
             nAlign,
@@ -19,10 +20,12 @@ module SimpleBio
 
     import
         BioSequences,
-        BioAlignments
+        BioAlignments,
+        Random
     using
         BioSequences, 
-        BioAlignments
+        BioAlignments,
+        Random
 
 
     include("align.jl")
