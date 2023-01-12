@@ -1,4 +1,3 @@
-module SimpleBio
 """
     SimpleBio.jl 
 --biological sequences in simple text way!
@@ -18,8 +17,10 @@ Features:
 + Sequence alignment with nAlign(DNA or RNA) and aAlign (for amino acid sequences). 
     (powered by BioAlignments.jl and BioSequences.jl)
 + outputs are text String that can be used in the further processing!
+"""
+module SimpleBio
 
-    """
+    
     export 
         #seqidentiy
             IsDNA,
