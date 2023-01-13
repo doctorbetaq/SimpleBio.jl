@@ -8,7 +8,6 @@ Alignment of nucleotides (DNA or RNA) by default gap_open = -5, gap_extend = -1 
 parameter for type of sequence
     1 => DNA
     2 => RNA
-
 """
 function nalign(type::Int64, s1::String, s2::String)
     scoremodel = AffineGapScoreModel(EDNAFULL, gap_open=-5, gap_extend=-1)
@@ -29,7 +28,6 @@ end
     nalign(type::Int64, s1::String, s2::String, g_o::Int64, g_e::Int64)
 Alignment of nucleotides (DNA or RNA) with type-in gap_open and gap_extend values. 
 (see BioAlignments.jl for details.)
-
 """
 function nalign(type::Int64, s1::String, s2::String, g_o::Int64, g_e::Int64)
     scoremodel = AffineGapScoreModel(EDNAFULL, gap_open=g_o, gap_extend=g_e)
@@ -49,7 +47,6 @@ end
     aalign(s1::String, s2::String)
 Alignment of amino acid by default gap_open = -5, gap_extend = -1 
 (see BioAlignments.jl for details.)
-
 """
 function aalign(s1::String, s2::String)
     scoremodel = AffineGapScoreModel(BLOSUM62, gap_open=-5, gap_extend=-1)
@@ -64,7 +61,6 @@ end
     aalign(s1::String, s2::String, g_o::Int64, g_e::Int64)
 Alignment of nucleotides (DNA or RNA) with type-in gap_open and gap_extend values. 
 (see BioAlignments.jl for details.)
-
 """
 function aalign(s1::String, s2::String, g_o::Int64, g_e::Int64)
     scoremodel = AffineGapScoreModel(BLOSUM62, gap_open=g_o, gap_extend=g_e)
