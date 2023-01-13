@@ -1,5 +1,5 @@
 """
-    isdna()
+    isdna(x::String)
 Identify is a sequence is DNA sequence in string type.
 """
 function isdna(x::String)
