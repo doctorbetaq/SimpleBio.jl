@@ -21,8 +21,12 @@ well come to SimpleBio.jl --biological sequences in simple text way!
 
 ## Install
 To install SimpleBio, type ']' in REPL to enter Pkg mode and type:
-    (@v1.8) pkg> add 
-    
-    
+```julia
+add https://github.com/doctorbetaq/SimpleBio.jl
+```
 
 ## Usage
+To use SimpleBio, simply type in:
+```julia
+using SimpleBio
+```
