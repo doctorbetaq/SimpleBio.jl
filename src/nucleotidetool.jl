@@ -112,18 +112,18 @@ end
     RandSeq(type::String, length::Int64)
 Generate random sequence of select type (RNA, DNA or aminoacid).
 Acceptable parameters of type: 
-DNA: ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
-RNA: ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
+DNA: ["DNA", "DNAs", "DNA nucleotides", "DNA chain", "dna", "dnas", "dna nucleotides", "dna chain"]
+RNA: ["RNA", "RNAs", "RNA nucleotides", "RNA chain", "rna", "rnas", "rna nucleotides", "rna chain"]
 amino acid: ["AminoAcid", "aminoacid", "amino acid", "peptide", "aa", "AA"]
 """
 function RandSeq(type::String, length::Int64)
-    if type in ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
+    if type in ["DNA", "DNAs", "DNA nucleotides", "DNA chain", "dna", "dnas", "dna nucleotides", "dna chain"]
         seqout = join(rand(['A','T','C','G'], length))
         println("""
         Generated one random RNA sequence:
         sequence: 5'-$seqout-3'
         """)
-    elseif type in ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
+    elseif type in ["RNA", "RNAs", "RNA nucleotides", "RNA chain", "rna", "rnas", "rna nucleotides", "rna chain"]
         seqout = join(rand(['A','U','C','G'], length))
         println("""
         Generated one random DNA sequence:
@@ -144,19 +144,19 @@ end
     RandSeq(type::String, length::Int64, num::Int64)
 Generate inputted numbers of random sequence of select type (RNA, DNA or aminoacid).
 Acceptable parameters of type: 
-DNA: ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
-RNA: ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
+DNA: ["DNA", "DNAs", "DNA nucleotides", "DNA chain", "dna", "dnas", "dna nucleotides", "dna chain"]
+RNA: ["RNA", "RNAs", "RNA nucleotides", "RNA chain", "rna", "rnas", "rna nucleotides", "rna chain"]
 amino acid: ["AminoAcid", "aminoacid", "amino acid", "peptide", "aa", "AA"]
 """
 function RandSeq(type::String, length::Int64, num::Int64)
     x = 1
     out = []
     for x in 1:num
-        if type in ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
+        if type in ["DNA", "DNAs", "DNA nucleotides", "DNA chain", "dna", "dnas", "dna nucleotides", "dna chain"]
             seqout = join(rand(['A','T','C','G'], length))
             push!(out, seqout)
             x+=1
-        elseif type in ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
+        elseif type in ["RNA", "RNAs", "RNA nucleotides", "RNA chain", "rna", "rnas", "rna nucleotides", "rna chain"]
             seqout = join(rand(['A','U','C','G'], length))
             push!(out, seqout)
             x+=1

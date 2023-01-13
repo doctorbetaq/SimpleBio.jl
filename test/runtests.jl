@@ -26,8 +26,8 @@ non = "KKYOOPKKYOOP"
         @test RTranscript(rnatest) == "GTTAGTAAGGTC"
     end #test nucleotidetools
 
-    DNAarr= ["DNA","DNAs", "DNA nucleotides", "DNA chain"]
-    RNAarr= ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
+    DNAarr= ["DNA", "DNAs", "DNA nucleotides", "DNA chain", "dna", "dnas", "dna nucleotides", "dna chain"]
+    RNAarr= ["RNA", "RNAs", "RNA nucleotides", "RNA chain", "rna", "rnas", "rna nucleotides", "rna chain"]  
     aminoacidarr= ["AminoAcid", "aminoacid", "amino acid", "peptide", "aa", "AA"]
 
 @testset "RandSeq-DNA" begin
@@ -37,7 +37,7 @@ non = "KKYOOPKKYOOP"
         end
     end
     @testset "RandSeq-DNA-2" begin  
-        RNAarr= ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]  
+        RNAarr= ["RNA", "RNAs", "RNA nucleotides", "RNA chain", "rna", "rnas", "rna nucleotides", "rna chain"]  
         for n in RNAarr
             @test isrna(RandSeq(n, 10)) == true
         end
