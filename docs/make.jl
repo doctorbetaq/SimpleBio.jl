@@ -9,7 +9,7 @@ makedocs(
     modules = [SimpleBio],
     pages = [
         "Home" => "index.md",
-        "alignment" => "alignments.md",
+        
     ]
 )
 
