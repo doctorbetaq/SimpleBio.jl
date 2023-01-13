@@ -1,5 +1,6 @@
 # include("seqidentiy.jl")
 using Random
+export RandSeq
 
 """
     transcript(x::String)
@@ -108,7 +109,7 @@ function RTanscript(x::String)
 end
 
 """
-    randseq(type::String, length::Int64)
+    RandSeq(type::String, length::Int64)
 Generate random sequence of select type (RNA, DNA or aminoacid).
 Acceptable parameters of type: 
 DNA: ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
@@ -116,7 +117,7 @@ RNA: ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
 amino acid: ["AminoAcid", "aminoacid", "amino acid", "peptide", "aa", "AA"]
 """
 
-function randseq(type::String, length::Int64)
+function RandSeq(type::String, length::Int64)
     if type in ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
         seqout = join(rand(['A','T','C','G'], length))
         println("""
@@ -141,14 +142,14 @@ end
 
 
 """
-    randseq(type::String, length::Int64)
+    RandSeq(type::String, length::Int64)
 Generate inputted numbers of random sequence of select type (RNA, DNA or aminoacid).
 Acceptable parameters of type: 
 DNA: ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
 RNA: ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
 amino acid: ["AminoAcid", "aminoacid", "amino acid", "peptide", "aa", "AA"]
 """
-function randseq(type::String, length::Int64, num::Int64)
+function RandSeq(type::String, length::Int64, num::Int64)
     x = 1
     out = []
     for x in 1:num
@@ -173,7 +174,7 @@ function randseq(type::String, length::Int64, num::Int64)
         $jo""")
 end
 
-function randseq(operator::Int64, type::String, length::Int64, num::Int64)
+function RandSeq(operator::Int64, type::String, length::Int64, num::Int64)
     x = 1
     out = []
     for x in 1:num
@@ -200,8 +201,8 @@ function randseq(operator::Int64, type::String, length::Int64, num::Int64)
         Generated $num random $type sequences:
         sequences (5'-3"): 
         $jo""")
-        @warn "Type randseq(operator, type, length, number) with operator = 1 to get the array return!"
+        @warn "Type RandSeq(operator, type, length, number) with operator = 1 to get the array return!"
     end
 end
 
-# randseq(0, "DNA", 10,10)
+RandSeq(0, "DNA", 10,10)

@@ -12,7 +12,7 @@
     *transcript (xtranscript) for transcription of DNA to RNA (xtranscript for DNA with nucleobase not ATCG.)
     *Reverse-compliment sequence using DNArc and RNArc functions.
     *Retro-transcription of RNA to DNA using RTanscript function.
-    *randseq function to generate DNA, RNA or amino acid chains.
+    *RandSeq function to generate DNA, RNA or amino acid chains.
     
 + Sequence alignment with nalign(DNA or RNA) and aalign (for amino acid sequences). 
     (powered by BioAlignments.jl and BioSequences.jl)
@@ -33,7 +33,7 @@ module SimpleBio
             DNArc,
             RNArc,
             RTanscript, 
-            randseq,
+            RandSeq,
         
         #alignment
             nalign,

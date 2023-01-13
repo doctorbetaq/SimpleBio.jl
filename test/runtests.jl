@@ -31,33 +31,33 @@ non = "KKYOOPKKYOOP"
     aminoacidarr= ["AminoAcid", "aminoacid", "amino acid", "peptide", "aa", "AA"]
 
 # @testset "RandomDNA" begin
-    @testset "randseq-DNA-1" begin
+    @testset "RandSeq-DNA-1" begin
         for n in DNAarr
-            @test isdna(randseq(n, 10)) == true
+            @test isdna(RandSeq(n, 10)) == true
         end
     end
-    @testset "randseq-DNA-2" begin  
+    @testset "RandSeq-DNA-2" begin  
         RNAarr= ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]  
         for n in RNAarr
-            @test isrna(randseq(n, 10)) == true
+            @test isrna(RandSeq(n, 10)) == true
         end
     end
-    @testset "randseq-DNA-3" begin
+    @testset "RandSeq-DNA-3" begin
         for n in aminoacidarr
-            @test isdna(randseq(n, 10)) == false
+            @test isdna(RandSeq(n, 10)) == false
         end
     end
 # end
 
-@testset "randseq-RNA" begin
+@testset "RandSeq-RNA" begin
     for n in DNAarr
-        @test isdna(randseq(n, 10)) == true
+        @test isdna(RandSeq(n, 10)) == true
     end
     for n in RNAarr
-        @test isrna(randseq(n, 10)) == true
+        @test isrna(RandSeq(n, 10)) == true
     end
     for n in aminoacidarr
-        @test isrna(randseq(n, 10)) == false
+        @test isrna(RandSeq(n, 10)) == false
     end
 end
 
