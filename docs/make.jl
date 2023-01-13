@@ -24,7 +24,4 @@ makedocs(
 # for more information.
 deploydocs(
     repo = "github.com/doctorbetaq/SimpleBio.jl.git",
-    push_preview = true,
-    deps = nothing,
-    make = nothing
 )
