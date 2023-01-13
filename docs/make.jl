@@ -10,7 +10,7 @@ makedocs(
     pages = [
         "SimpleBio" => "index.md",
         "Work with Nucleotides" =>"nts.md",
-        "Sequence Alignment" => "ali.md"
+        "Sequence Alignment" => "ali.md",
         "API" => "api.md"
     ]
 )
