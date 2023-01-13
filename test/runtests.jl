@@ -23,14 +23,14 @@ non = "KKYOOPKKYOOP"
         @test xtranscript(dnatest) == "GAAUUCGAAUUC"
         @test DNArc(dnatest) == "GAATTCGAATTC"
         @test RNArc(rnatest) == "GACCUUACUAAC"
-        @test RTanscript(rnatest) == "GTTAGTAAGGTC"
+        @test RTranscript(rnatest) == "GTTAGTAAGGTC"
     end #test nucleotidetools
 
     DNAarr= ["DNA","DNAs", "DNA nucleotides", "DNA chain"]
     RNAarr= ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
     aminoacidarr= ["AminoAcid", "aminoacid", "amino acid", "peptide", "aa", "AA"]
 
-# @testset "RandomDNA" begin
+@testset "RandSeq-DNA" begin
     @testset "RandSeq-DNA-1" begin
         for n in DNAarr
             @test isdna(RandSeq(n, 10)) == true
@@ -47,7 +47,7 @@ non = "KKYOOPKKYOOP"
             @test isdna(RandSeq(n, 10)) == false
         end
     end
-# end
+end
 
 @testset "RandSeq-RNA" begin
     for n in DNAarr
@@ -79,4 +79,18 @@ alnaa2 = aalign("KYGRRRKKRGC", "KYGRRRGGGGKKRGC", -10, -1)
     @test typeof(alnaa2) == PairwiseAlignment{LongAA, LongAA}
 end
 
+
+@testset "translation to aa" begin
+    dnaseq = "ATGGCCAAACTCGAAACCGTTACGCTGGGCAACATCGGCAAGGATGGCAAGCAGACGCTGGTGCTGAATCCGCGCGGTGTTAATCCGACCAATGGTGTGGCGAGTCTGAGTCAAGCGGGTGCCGTTCCAGCGCTGGAGAAACGTGTGACCGTTAGTGTGAGCCAGCCGAGTCGCAACCGCAAGAACTACAAGGTGCAAGTGAAGATTCAGAACCCAACCGCGTGCACCGCCAACGGTAGTTGCGATCCAAGCGTGACCCGCCAAGCGTACGCCGATGTTACCTTCAGCTTCACCCAGTACAGCACCGACGAAGAGCGCGCGTTTGTTCGCACCGAACTGGCCGCGCTGCTGGCGAGTCCACTGCTGATCGATGCGATTGACCAGCTGAACCCAGCCTAC"
+    @test translatedna(1,dnaseq) == "MAKLETVTLGNIGKDGKQTLVLNPRGVNPTNGVASLSQAGAVPALEKRVTVSVSQPSRNRKNYKVQVKIQNPTACTANGSCDPSVTRQAYADVTFSFTQYSTDEERAFVRTELAALLASPLLIDAIDQLNPAY"
+    dna2="ATGGCCAAACTCGAAACCGTTACGCTGGGCAACATCGGCAAGGAT"
+    @test translatedna(dna2) =="Met-Ala-Lys-Leu-Glu-Thr-Val-Thr-Leu-Gly-Asn-Ile-Gly-Lys-Asp"
+    @test translatedna(1, dna2) == "MAKLETVTLGNIGKD"
+    rna2 = "AUGGCCAAACUCGAAACCGUUACGCUGGGCAACAUCGGCAAGGAU"
+    @test translatedna(rna2) =="Met-Ala-Lys-Leu-Glu-Thr-Val-Thr-Leu-Gly-Asn-Ile-Gly-Lys-Asp"
+    @test translatedna(1, rna2) == "MAKLETVTLGNIGKD"
+
+end
+
 end #test SimpleBio
+

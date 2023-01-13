@@ -11,8 +11,9 @@ transcript
 xtranscript
 DNArc
 RNArc
-RTanscript
+RTranscript
 RandSeq
 isdna
 isrna
+translatedna
 ```

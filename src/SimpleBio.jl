@@ -11,7 +11,7 @@
 + Work with nucleotides:
     *transcript (xtranscript) for transcription of DNA to RNA (xtranscript for DNA with nucleobase not ATCG.)
     *Reverse-compliment sequence using DNArc and RNArc functions.
-    *Retro-transcription of RNA to DNA using RTanscript function.
+    *Retro-transcription of RNA to DNA using RTranscript function.
     *RandSeq function to generate DNA, RNA or amino acid chains.
     
 + Sequence alignment with nalign(DNA or RNA) and aalign (for amino acid sequences). 
@@ -32,12 +32,15 @@ module SimpleBio
             xtranscript,
             DNArc,
             RNArc,
-            RTanscript, 
+            RTranscript, 
             RandSeq,
         
         #alignment
             nalign,
-            aalign
+            aalign,
+            
+        #translation
+            translatedna
 
     import
         BioSequences,
@@ -52,5 +55,6 @@ module SimpleBio
     include("align.jl")
     include("seqidentiy.jl")
     include("nucleotidetool.jl")
+    include("translation.jl")
 
 end # module SimpleBio

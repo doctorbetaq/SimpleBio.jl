@@ -93,10 +93,10 @@ end
 
 
 """
-    RTanscript(x::String)
+    RTranscript(x::String)
 Generate the retro transcription of the entered sequence in string type.
 """
-function RTanscript(x::String)
+function RTranscript(x::String)
     rna1 = uppercase(x)
     rna1c = [n for n in rna1]
     aucg = ['A', 'U', 'C', 'G']
