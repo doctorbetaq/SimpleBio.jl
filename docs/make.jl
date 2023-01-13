@@ -1,7 +1,9 @@
 push!(LOAD_PATH,"../src/")
-import Pkg
+
 using Documenter
 using SimpleBio
+
+DocMeta.setdocmeta!(SimpleBio, :DocTestSetup, :(using SimpleBio); recursive=true)
 
 makedocs(
     sitename = "SimpleBio",
@@ -12,7 +14,9 @@ makedocs(
         "Work with Nucleotides" =>"nts.md",
         "Sequence Alignment" => "ali.md",
         "API" => "api.md"
-    ]
+    ],
+    checkdocs = :all,
+        
 )
 
 # Documenter can also automatically deploy documentation to gh-pages.
@@ -20,5 +24,7 @@ makedocs(
 # for more information.
 deploydocs(
     repo = "github.com/doctorbetaq/SimpleBio.jl.git",
-    versions = ["stable" => "v^", "v#.#", devurl => devurl],
+    push_preview = true,
+    deps = nothing,
+    make = nothing
 )
