@@ -116,7 +116,6 @@ DNA: ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
 RNA: ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
 amino acid: ["AminoAcid", "aminoacid", "amino acid", "peptide", "aa", "AA"]
 """
-
 function RandSeq(type::String, length::Int64)
     if type in ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
         seqout = join(rand(['A','T','C','G'], length))
@@ -142,7 +141,7 @@ end
 
 
 """
-    RandSeq(type::String, length::Int64)
+    RandSeq(type::String, length::Int64, num::Int64)
 Generate inputted numbers of random sequence of select type (RNA, DNA or aminoacid).
 Acceptable parameters of type: 
 DNA: ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
@@ -174,6 +173,15 @@ function RandSeq(type::String, length::Int64, num::Int64)
         $jo""")
 end
 
+"""
+    RandSeq(operator::Int64, type::String, length::Int64, num::Int64)
+Generate inputted numbers of random sequence of select type (RNA, DNA or aminoacid).
+operator = 1 to get array returned.
+Acceptable parameters of type: 
+DNA: ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
+RNA: ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
+amino acid: ["AminoAcid", "aminoacid", "amino acid", "peptide", "aa", "AA"]
+"""
 function RandSeq(operator::Int64, type::String, length::Int64, num::Int64)
     x = 1
     out = []
