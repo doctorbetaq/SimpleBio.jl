@@ -23,7 +23,7 @@ function nalign(type::Int64, s1::String, s2::String)
     return alignment(res)
 end
 
-typeof(nalign(1, "GAATTC", "GAATTC"))
+# typeof(nalign(1, "GAATTC", "GAATTC"))
 
 """
     nalign(s1, s2, g_o, g_e)
@@ -43,7 +43,7 @@ function nalign(type, s1, s2, g_o, g_e)
 end
 
 
-nalign(1,"GAATTA", "GAATTG", -5, -1)
+# nalign(1,"GAATTA", "GAATTG", -5, -1)
 
 """
     aalign(s1, s2)
@@ -57,7 +57,7 @@ function aalign(s1::String, s2::String)
     res = pairalign(GlobalAlignment(), s1, s2, scoremodel)
     return alignment(res)
 end
-typeof(aalign("KYGRRRKKRGC", "KYGRRRGGGGKKRGC"))
+# typeof(aalign("KYGRRRKKRGC", "KYGRRRGGGGKKRGC"))
 
 
 """

@@ -205,4 +205,4 @@ function RandSeq(operator::Int64, type::String, length::Int64, num::Int64)
     end
 end
 
-RandSeq(0, "DNA", 10,10)
+# RandSeq(0, "DNA", 10,10)

@@ -9,7 +9,7 @@ makedocs(
     modules = [SimpleBio],
     pages = [
         "SimpleBio" => "index.md",
-        "Work with Nucleotides" =>"nts.md"
+        "Work with Nucleotides" =>"nts.md",
         "Sequence Alignment" => "ali.md"
     ]
 )
