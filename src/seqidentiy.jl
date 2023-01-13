@@ -1,8 +1,8 @@
 """
-    IsDNA()
+    isdna()
 Identify is a sequence is DNA sequence in string type.
 """
-function IsDNA(x::String)
+function isdna(x::String)
     seq = uppercase(x)
     dna = ['A','T','C','G']
     tru = []
@@ -24,10 +24,10 @@ function IsDNA(x::String)
 end
 
 """
-    IsRNA
+    isrna
 Identify is a sequence is RNA sequence in string type.
 """
-function IsRNA(x::String)
+function isrna(x::String)
     
     seq = uppercase(x)
     rna = ['A','U','C','G']

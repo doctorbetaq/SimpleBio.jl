@@ -2,15 +2,15 @@
 using Random
 
 """
-    Transcript(x::String)
-Transcription of the imput DNA equence.
+    transcript(x::String)
+transcription of the imput DNA equence.
 This function only allow DNA sequence with A, T, C, G bases.
-If there are other kind of base in the DNA sequence, consider using xTranscript(x::String)
+If there are other kind of base in the DNA sequence, consider using xtranscript(x::String)
 
 """
-function Transcript(x::String)
+function transcript(x::String)
     seq = uppercase(x)
-    if IsDNA(seq) == true
+    if isdna(seq) == true
         seq2 = replace(seq, 'T' => 'U')
         return seq2
     else
@@ -19,19 +19,19 @@ function Transcript(x::String)
 end
 
 """
-    xTranscript(x::String)
-Transcription of the imput DNA equence.
+    xtranscript(x::String)
+transcription of the imput DNA equence.
 This function allow DNA sequences with bases not included in A, T, C, G.
 """
-function xTranscript(x::String)
+function xtranscript(x::String)
     seq = uppercase(x)
-    if IsDNA(seq) == false
+    if isdna(seq) == false
         @warn "The sequence contains unknown nucleobases!"
     end
     return replace(seq, 'T'=>'U')
 end
 
-# xTranscript("GAAT-TC")
+# xtranscript("GAAT-TC")
 
 """
     DNArc(x::String)
@@ -41,7 +41,7 @@ function DNArc(x::String)
     dna1 = uppercase(x)
     dna2 = []
     dna1c = [car for car in dna1]
-    if IsDNA(dna1) == false
+    if isdna(dna1) == false
         @warn "The sequence contains unknown nucleobases!"
     end
     for car in dna1c
@@ -70,7 +70,7 @@ function RNArc(x::String)
     rna1 = uppercase(x)
     rna2 = []
     rna1c = [car for car in rna1]
-    if IsRNA(rna1) == false
+    if isrna(rna1) == false
         @warn "The sequence contains unknown nucleobases!"
     end
     for car in rna1c
@@ -108,7 +108,7 @@ function RTanscript(x::String)
 end
 
 """
-    RandSeq(type::String, length::Int64)
+    randseq(type::String, length::Int64)
 Generate random sequence of select type (RNA, DNA or aminoacid).
 Acceptable parameters of type: 
 DNA: ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
@@ -116,7 +116,7 @@ RNA: ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
 amino acid: ["AminoAcid", "aminoacid", "amino acid", "peptide", "aa", "AA"]
 """
 
-function RandSeq(type::String, length::Int64)
+function randseq(type::String, length::Int64)
     if type in ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
         seqout = join(rand(['A','T','C','G'], length))
         println("""
@@ -141,14 +141,14 @@ end
 
 
 """
-    RandSeq(type::String, length::Int64)
+    randseq(type::String, length::Int64)
 Generate inputted numbers of random sequence of select type (RNA, DNA or aminoacid).
 Acceptable parameters of type: 
 DNA: ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
 RNA: ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
 amino acid: ["AminoAcid", "aminoacid", "amino acid", "peptide", "aa", "AA"]
 """
-function RandSeq(type::String, length::Int64, num::Int64)
+function randseq(type::String, length::Int64, num::Int64)
     x = 1
     out = []
     for x in 1:num
@@ -173,7 +173,7 @@ function RandSeq(type::String, length::Int64, num::Int64)
         $jo""")
 end
 
-function RandSeq(operator::Int64, type::String, length::Int64, num::Int64)
+function randseq(operator::Int64, type::String, length::Int64, num::Int64)
     x = 1
     out = []
     for x in 1:num
@@ -200,8 +200,8 @@ function RandSeq(operator::Int64, type::String, length::Int64, num::Int64)
         Generated $num random $type sequences:
         sequences (5'-3"): 
         $jo""")
-        @warn "Type RandSeq(operator, type, length, number) with operator = 1 to get the array return!"
+        @warn "Type randseq(operator, type, length, number) with operator = 1 to get the array return!"
     end
 end
 
-# RandSeq(0, "DNA", 10,10)
+# randseq(0, "DNA", 10,10)
