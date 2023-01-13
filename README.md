@@ -17,7 +17,7 @@ Package developed by doctorbetaq.
 + randseq function to generate DNA, RNA or amino acid chains.
 + tranlatedna function for translation of dna sequence (also can enter RNA sequence if needed) to amino acid sequence.
     
-#### 3. Sequence alignment with nalign(DNA or RNA) and aalign (for amino acid sequences). 
+#### 3. Sequence alignment with nalign (DNA or RNA) and aalign (for amino acid sequences). 
 #### 4. outputs are text String that can be used in the further processing!
 
 
