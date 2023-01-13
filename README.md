@@ -7,7 +7,7 @@
   
 Package developed by doctorbetaq.
 
-# Features:
+## Features
 + Sequence identification for DNA or RNA. (isDNA, isRNA functions)
 + Work with nucleotides:
     *transcript (xtranscript) for transcription of DNA to RNA (xtranscript for DNA with nucleobase not ATCG.)
