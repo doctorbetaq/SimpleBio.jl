@@ -171,8 +171,8 @@ end
 # translatedna(1,dnaseq) == "MAKLETVTLGNIGKDGKQTLVLNPRGVNPTNGVASLSQAGAVPALEKRVTVSVSQPSRNRKNYKVQVKIQNPTACTANGSCDPSVTRQAYADVTFSFTQYSTDEERAFVRTELAALLASPLLIDAIDQLNPAY"
 
 """
-    translatedna(translatedna(x::String))
-Return the translation result of the input DNA or RNA sequence in 1-letter amino acid codes.
+    translatedna(translatedna(operator::Int64, x::String))
+Return the translation result of the input DNA or RNA sequence in 1-letter amino acid codes while operator enter =1.
 """
 function translatedna(operator::Int64, x::String)
     ux = uppercase(x)
