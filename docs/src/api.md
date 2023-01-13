@@ -3,7 +3,7 @@ CurrentModule = SimpleBio
 DocTestSetup = quote
     using SimpleBio
 end
-
+```
 #APIs
 
 ```@docs
