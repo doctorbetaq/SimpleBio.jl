@@ -8,7 +8,7 @@
 Package developed by doctorbetaq.
 
 ## Features
-#### 1. Sequence identification for DNA or RNA. (isDNA, isRNA functions)
+#### 1. Sequence identification for DNA or RNA. (isdna, isrna functions)
 #### 2. Work with nucleotides:
 + transcript (xtranscript) for transcription of DNA to RNA (xtranscript for DNA with nucleobase not ATCG.)
 + Reverse-compliment sequence using DNArc and RNArc functions.
