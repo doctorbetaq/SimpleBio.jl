@@ -34,8 +34,38 @@ jobs:
       - run:
           name: Install
           command: julia -e 'using Pkg; Pkg.update();Pkg.add(url="https://github.com/doctorbetaq/SimpleBio.jl");Pkg.build("SimpleBio"); Pkg.test("SimpleBio")'
+  build2:
+    working_directory: ~/SimpleBio
+    docker: 
+    - image: julia:1.8.4
+    steps:
+      - checkout
+      - run:
+          name: Install
+          command: julia -e 'using Pkg; Pkg.update();Pkg.add(url="https://github.com/doctorbetaq/SimpleBio.jl");Pkg.build("SimpleBio"); Pkg.test("SimpleBio")'
+  build3:
+    working_directory: ~/SimpleBio
+    docker: 
+    - image: julia:1.6.7
+    steps:
+      - checkout
+      - run:
+          name: Install
+          command: julia -e 'using Pkg; Pkg.update();Pkg.add(url="https://github.com/doctorbetaq/SimpleBio.jl");Pkg.build("SimpleBio"); Pkg.test("SimpleBio")'
+  build4:
+    working_directory: ~/SimpleBio
+    docker: 
+    - image: julia:1.9.0-beta2
+    steps:
+      - checkout
+      - run:
+          name: Install
+          command: julia -e 'using Pkg; Pkg.update();Pkg.add(url="https://github.com/doctorbetaq/SimpleBio.jl");Pkg.build("SimpleBio"); Pkg.test("SimpleBio")'
 
 workflows:
   build:
     jobs:
       - build
+      - build2
+      - build3
+      - build4
