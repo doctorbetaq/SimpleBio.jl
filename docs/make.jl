@@ -8,8 +8,9 @@ makedocs(
     format = Documenter.HTML(),
     modules = [SimpleBio],
     pages = [
-        "Home" => "index.md",
-        
+        "SimpleBio" => "index.md",
+        "Work with Nucleotides" =>"nts.md"
+        "Sequence Alignment" => "ali.md"
     ]
 )
 

@@ -1,13 +1,13 @@
 # SimpleBio.jl
 
      
-    well come to SimpleBio.jl --biological sequences in simple text way!
+well come to SimpleBio.jl --biological sequences in simple text way!
 
-    !!This package is currently under development and testing , it is not ready for production.!!
+### !!This package is currently under development and testing , it is not ready for production.!!
 
-    =========
-    Features:
-    =========
+
+# Features
+
 + Sequence identification for DNA or RNA. (isdna, isrna functions)
 + Work with nucleotides:
     +transcript (xtranscript) for transcription of DNA to RNA (xtranscript for DNA with nucleobase not ATCG.)
@@ -20,6 +20,9 @@
 + outputs are text String that can be used in the further processing!
 
 ## Install
-
+To install SimpleBio, type ']' in REPL to enter Pkg mode and type:
+    (@v1.8) pkg> add 
+    
+    
 
 ## Usage
