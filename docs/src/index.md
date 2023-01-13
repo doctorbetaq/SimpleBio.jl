@@ -1,12 +1,11 @@
 # SimpleBio.jl
+[![license](https://img.shields.io/github/license/doctorbetaq/SimpleBio.jl?style=flat-square)](https://github.com/doctorbetaq/SimpleBio.jl/blob/main/LICENSE)
+[![build](https://img.shields.io/circleci/build/github/doctorbetaq/SimpleBio.jl/main?style=flat-square)](https://app.circleci.com/pipelines/github/doctorbetaq/SimpleBio.jl)
+[![docs](https://img.shields.io/badge/docs-0.1.0-blue?style=flat-square)](https://doctorbetaq.github.io/SimpleBio.jl/)
 
-     
 well come to SimpleBio.jl --biological sequences in simple text way!
 
-### !!This package is currently under development and testing , it is not ready for production.!!
-
-
-# Features
+## Features
 
 + Sequence identification for DNA or RNA. (isdna, isrna functions)
 + Work with nucleotides:

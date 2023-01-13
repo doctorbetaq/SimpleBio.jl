@@ -6,10 +6,6 @@
 --biological sequences in simple text way!
   
 Package developed by doctorbetaq.
-    
-!!This package is currently under development and testing , it is not ready for production.!!
-
-
 
 # Features:
 + Sequence identification for DNA or RNA. (isDNA, isRNA functions)
@@ -24,6 +20,13 @@ Package developed by doctorbetaq.
 + outputs are text String that can be used in the further processing!
 
 ## Install
-
+To install SimpleBio, type ']' in REPL to enter Pkg mode and type:
+```julia
+add https://github.com/doctorbetaq/SimpleBio.jl
+```
 
 ## Usage
+To use SimpleBio, simply type in:
+```julia
+using SimpleBio
+```
