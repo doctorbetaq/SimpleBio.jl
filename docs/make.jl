@@ -20,6 +20,5 @@ makedocs(
 # for more information.
 deploydocs(
     repo = "github.com/doctorbetaq/SimpleBio.jl.git",
-    versions = "stable",
-    branch = "gh-pages"
+    versions = ["stable" => "v^", "v#.#", devurl => devurl],
 )
