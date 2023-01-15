@@ -5,8 +5,6 @@
 [![docs](https://img.shields.io/badge/docs-stable-blue?style=flat-square)](https://doctorbetaq.github.io/SimpleBio.jl/stable/)
 
 Work with biological sequences as simple as a text way!
-  
-Package developed by doctorbetaq.
 
 ## Features
 #### 1. Sequence identification for DNA or RNA. (isdna, isrna functions)
