@@ -143,7 +143,7 @@ codon1 = Dict(
 )
 
 """
-    translatedna(translatedna(x::String))
+    translatedna(x::String))
 Return the translation result of the input DNA or RNA sequence in 3-letter amino acid codes.
 """
 function translatedna(x::String)
@@ -171,7 +171,7 @@ end
 # translatedna(1,dnaseq) == "MAKLETVTLGNIGKDGKQTLVLNPRGVNPTNGVASLSQAGAVPALEKRVTVSVSQPSRNRKNYKVQVKIQNPTACTANGSCDPSVTRQAYADVTFSFTQYSTDEERAFVRTELAALLASPLLIDAIDQLNPAY"
 
 """
-    translatedna(translatedna(operator::Int64, x::String))
+    translatedna(operator::Int64, x::String))
 Return the translation result of the input DNA or RNA sequence in 1-letter amino acid codes while operator enter =1.
 """
 function translatedna(operator::Int64, x::String)
