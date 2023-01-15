@@ -4,7 +4,7 @@
 [![docs](https://img.shields.io/badge/docs-dev-blue?style=flat-square)](https://doctorbetaq.github.io/SimpleBio.jl/dev/)
 [![docs](https://img.shields.io/badge/docs-stable-blue?style=flat-square)](https://doctorbetaq.github.io/SimpleBio.jl/stable/)
 
---biological sequences in simple text way!
+Work with biological sequences as simple as a text way!
   
 Package developed by doctorbetaq.
 
