@@ -1,4 +1,4 @@
-name: Workflow for Codecov example-julia
+name: CodeCov for SimpleBio
 on: [push, pull_request]
 jobs:
   run:
