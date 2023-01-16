@@ -24,7 +24,7 @@ function isdna(x::String)
 end
 
 """
-    isrna((x::String)
+    isrna(x::String)
 Identify is a sequence is RNA sequence in string type.
 """
 function isrna(x::String)
