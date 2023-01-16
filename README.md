@@ -13,7 +13,7 @@ Work with biological sequences as simple as a text way!
 + Function transcript (xtranscript) for transcription of DNA to RNA (xtranscript for DNA with nucleobase not ATCG.)
 + Reverse-compliment sequence using DNArc and RNArc functions.
 + Retro-Transcription of RNA to DNA using RTanscript function.
-+ function RandSeq for generating DNA, RNA or amino acid chains.
++ Function RandSeq for generating DNA, RNA or amino acid chains.
 + Use the tranlatedna function for translation of dna sequence (also can enter RNA sequence if needed) to amino acid sequence.
     
 #### 3. Sequence alignment with nalign (DNA or RNA) and aalign (for amino acid sequences). 
