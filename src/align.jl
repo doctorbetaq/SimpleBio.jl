@@ -1,5 +1,4 @@
 import BioSequences, BioAlignments
-
 using BioSequences, BioAlignments
 
 """
@@ -22,8 +21,6 @@ function nalign(type::Int64, s1::String, s2::String)
     return alignment(res)
 end
 
-# typeof(nalign(1, "GAATTC", "GAATTC"))
-
 """
     nalign(type::Int64, s1::String, s2::String, g_o::Int64, g_e::Int64)
 Alignment of nucleotides (DNA or RNA) with type-in gap_open and gap_extend values. 
@@ -40,9 +37,6 @@ function nalign(type::Int64, s1::String, s2::String, g_o::Int64, g_e::Int64)
     return alignment(res)
 end
 
-
-# nalign(1,"GAATTA", "GAATTG", -5, -1)
-
 """
     aalign(s1::String, s2::String)
 Alignment of amino acid by default gap_open = -5, gap_extend = -1 
@@ -54,8 +48,6 @@ function aalign(s1::String, s2::String)
     res = pairalign(GlobalAlignment(), s1, s2, scoremodel)
     return alignment(res)
 end
-# typeof(aalign("KYGRRRKKRGC", "KYGRRRGGGGKKRGC"))
-
 
 """
     aalign(s1::String, s2::String, g_o::Int64, g_e::Int64)
@@ -68,5 +60,3 @@ function aalign(s1::String, s2::String, g_o::Int64, g_e::Int64)
     res = pairalign(GlobalAlignment(), s1, s2, scoremodel)
     return alignment(res)
 end
-
-# aalign("KYGRRRKKRGC", "KYGRRRGGGGKKRGC", -10, -1)

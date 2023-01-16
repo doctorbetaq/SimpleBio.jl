@@ -1,4 +1,3 @@
-# include("seqidentiy.jl")
 using Random
 export RandSeq
 
@@ -212,5 +211,3 @@ function RandSeq(operator::Int64, type::String, length::Int64, num::Int64)
         @warn "Type RandSeq(operator, type, length, number) with operator = 1 to get the array return!"
     end
 end
-
-# RandSeq(0, "DNA", 10,10)
