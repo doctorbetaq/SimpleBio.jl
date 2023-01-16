@@ -1,6 +1,6 @@
 # SimpleBio.jl
 [![license](https://img.shields.io/github/license/doctorbetaq/SimpleBio.jl?style=flat-square)](https://github.com/doctorbetaq/SimpleBio.jl/blob/main/LICENSE)
-[![build](https://img.shields.io/circleci/build/github/doctorbetaq/SimpleBio.jl/main?style=flat-square)](https://app.circleci.com/pipelines/github/doctorbetaq/SimpleBio.jl?branch=main)
+[![build](https://img.shields.io/circleci/build/github/doctorbetaq/SimpleBio.jl/main?style=flat-square&logo=CircleCI)](https://app.circleci.com/pipelines/github/doctorbetaq/SimpleBio.jl?branch=main)
 ![CodeCov](https://img.shields.io/codecov/c/github/doctorbetaq/SimpleBIo.jl?style=flat-square&logo=Codecov)
 [![docs](https://img.shields.io/badge/docs-dev-blue?style=flat-square)](https://doctorbetaq.github.io/SimpleBio.jl/dev/)
 [![docs](https://img.shields.io/badge/docs-stable-blue?style=flat-square)](https://doctorbetaq.github.io/SimpleBio.jl/stable/)
