@@ -10,16 +10,16 @@ Welcome to SimpleBio.jl --work with biological sequences in simple text way!
 
 ## Features
 
-+ Sequence identification for DNA or RNA. (isdna, isrna functions)
-+ Work with nucleotides:
-    + transcript (xtranscript) for transcription of DNA to RNA (xtranscript for DNA with nucleobase not ATCG.)
-    + Reverse-compliment sequence using DNArc and RNArc functions.
-    + Retro-transcription of RNA to DNA using RTanscript function.
-    + randseq function to generate DNA, RNA or amino acid chains.
-    + tranlatedna function for translation of dna sequence (also can enter RNA sequence if needed) to amino acid sequence.
-+ Sequence alignment with nalign(DNA or RNA) and aalign (for amino acid sequences). 
-    (powered by BioAlignments.jl and BioSequences.jl)
-+ outputs are text String that can be used in the further processing!
+1. Sequence identification for DNA or RNA. (isdna, isrna functions)
+2. Work with nucleotides:
+  + Function transcript (xtranscript) for transcription of DNA to RNA (xtranscript for DNA with nucleobase not ATCG.)
+  + Reverse-compliment sequence using DNArc and RNArc functions.
+  + Retro-Transcription of RNA to DNA using RTanscript function.
+  + Function RandSeq for generating DNA, RNA or amino acid chains.
+  + Use the tranlatedna function for translation of dna sequence (also can enter RNA sequence if needed) to amino acid sequence.
+3. Sequence alignment with nalign (DNA or RNA) and aalign (for amino acid sequences).
+4. Outputs are text String that can be used in the further processing!
+Install
 
 ## Install
 To install SimpleBio, type ']' in REPL to enter Pkg mode and type:
