@@ -170,8 +170,9 @@ function RandSeq(type::String, length::Int64, num::Int64)
         Generated $num random $type sequences:
         sequences (5'-3"): 
         $jo""")
+        return out
 end
-
+typeof(RandSeq("DNA", 10, 10))
 """
     RandSeq(operator::Int64, type::String, length::Int64, num::Int64)
 Generate inputted numbers of random sequence of select type (RNA, DNA or aminoacid).
@@ -185,11 +186,11 @@ function RandSeq(operator::Int64, type::String, length::Int64, num::Int64)
     x = 1
     out = []
     for x in 1:num
-        if type in ["DNA", "DNAs", "DNA nucleotides", "DNA chain"]
+        if type in ["DNA", "DNAs", "DNA nucleotides", "DNA chain",  "dna", "dnas", "dna nucleotides", "dna chain"]
             seqout = join(rand(['A','T','C','G'], length))
             push!(out, seqout)
             x+=1
-        elseif type in ["RNA", "RNAs", "RNA nucleotides", "RNA chain"]
+        elseif type in ["RNA", "RNAs", "RNA nucleotides", "RNA chain",  "rna", "rnas", "rna nucleotides", "rna chain"]
             seqout = join(rand(['A','U','C','G'], length))
             push!(out, seqout)
             x+=1
@@ -201,7 +202,6 @@ function RandSeq(operator::Int64, type::String, length::Int64, num::Int64)
     end
     jo=join(out, "\n")
     if operator == 1
-        println("Generated $num random $type sequences:")
         return out
     else
         println("""
