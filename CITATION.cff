@@ -4,7 +4,7 @@ authors:
   - family-names: "Pang"
     given-names: "Hao-Han"
     orcid: "https://orcid.org/0000-0001-9071-9649"
-title: doctorbetaq/SimpleBio.jl: v0.1.0
+title: "doctorbetaq/SimpleBio.jl: v0.1.0"
 version: v0.1.0
 doi: 10.5281/zenodo.7547946
 date-released: 2023-01-18
