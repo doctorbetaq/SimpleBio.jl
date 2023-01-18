@@ -1,6 +1,6 @@
 name = "SimpleBio"
 uuid = "d9eea77d-fa5d-4a60-93a2-c9db3c2ebc67"
-authors = ["doctorbetaq <hanpang013@gmail.com>"]
+authors = ["Hao-Han Pang <hanpang013@gmail.com>"]
 version = "0.1.0"
 
 [deps]
