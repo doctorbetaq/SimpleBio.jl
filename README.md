@@ -5,6 +5,7 @@
 [![CodeCov](https://img.shields.io/codecov/c/github/doctorbetaq/SimpleBIo.jl?style=flat-square&logo=Codecov)](https://app.codecov.io/gh/doctorbetaq/SimpleBio.jl?search=&trend=24%20hours)
 [![docs](https://img.shields.io/badge/docs-dev-blue?style=flat-square)](https://doctorbetaq.github.io/SimpleBio.jl/dev/)
 [![docs](https://img.shields.io/badge/docs-stable-blue?style=flat-square)](https://doctorbetaq.github.io/SimpleBio.jl/stable/)
+[![DOI](https://zenodo.org/badge/587544290.svg)](https://zenodo.org/badge/latestdoi/587544290)
 
 Work with biological sequences as simple as a text way!
 
@@ -24,7 +25,7 @@ Work with biological sequences as simple as a text way!
 ## Install
 To install SimpleBio, type ']' in REPL to enter Pkg mode and type:
 ```julia
-add https://github.com/doctorbetaq/SimpleBio.jl
+add SimpleBio
 ```
 
 ## Usage
