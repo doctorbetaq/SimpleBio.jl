@@ -55,7 +55,7 @@ jobs:
   build4:
     working_directory: ~/SimpleBio
     docker: 
-    - image: julia:1.9.0
+    - image: julia:1.9.0-beta3
     steps:
       - checkout
       - run:
