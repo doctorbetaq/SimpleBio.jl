@@ -1,6 +1,7 @@
 # Use the latest 2.1 version of CircleCI pipeline process engine.
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
+os: [macos, linux, windows]
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
@@ -28,7 +29,7 @@ jobs:
   build:
     working_directory: ~/SimpleBio
     docker: 
-    - image: julia:1.8.5
+      - image: julia:1.8.5
     steps:
       - checkout
       - run:
