@@ -15,12 +15,15 @@ Work with biological sequences as simple as a text way!
 + Function transcript (xtranscript) for transcription of DNA to RNA (xtranscript for DNA with nucleobase not ATCG.)
 + Reverse-compliment sequence using DNArc and RNArc functions.
 + Retro-Transcription of RNA to DNA using RTanscript function.
-+ Function RandSeq for generating DNA, RNA or amino acid chains.
++ Function RandSeq for generating DNA, RNA or amino acid chains. rand_dna_rna function to generate a dataframe for random DNAs and their transcription.
 + Use the tranlatedna function for translation of dna sequence (also can enter RNA sequence if needed) to amino acid sequence.
     
 #### 3. Sequence alignment with nalign (DNA or RNA) and aalign (for amino acid sequences). 
 #### 4. Outputs are text String that can be used in the further processing!
 
+## Tests
+SimpleBio has been tested in macos, linux and windows environments with latest julia stable release.
+[![test](https://img.shields.io/github/actions/workflow/status/doctorbetaq/SimpleBio.jl/test.yml?style=flat-square)](https://github.com/doctorbetaq/SimpleBio.jl/actions/workflows/test.yml)
 
 ## Install
 To install SimpleBio, type ']' in REPL to enter Pkg mode and type:
