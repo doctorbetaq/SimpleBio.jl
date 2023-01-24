@@ -34,6 +34,7 @@ module SimpleBio
             RNArc,
             RTranscript, 
             RandSeq,
+            rand_dna_rna,
         
         #alignment
             nalign,
@@ -45,11 +46,13 @@ module SimpleBio
     import
         BioSequences,
         BioAlignments,
-        Random
+        Random,
+        DataFrames
     using
         BioSequences, 
         BioAlignments,
-        Random
+        Random,
+        DataFrames
 
 
     include("align.jl")

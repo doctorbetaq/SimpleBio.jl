@@ -16,4 +16,5 @@ RandSeq
 isdna
 isrna
 translatedna
+rand_dna_rna
 ```

@@ -99,6 +99,10 @@ end
     end
 end
 
+@testset verbose = true "10 rand dna-rna dataframe" begin
+    @test typeof(rand_dna_rna(10,10)) == DataFrame
+end
+
 alndna = nalign(1, "GAATTC", "GAATTC")
 alnrna = nalign(2, "GAAUUC", "GAAUUC")
 alndna2 = nalign(1, "GAATTC", "GAATTC", -5, -1)
@@ -129,4 +133,6 @@ end
 end
 
 end #test SimpleBio
+
+
 

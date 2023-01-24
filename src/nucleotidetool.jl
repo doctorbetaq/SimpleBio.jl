@@ -211,3 +211,20 @@ function RandSeq(operator::Int64, type::String, length::Int64, num::Int64)
         @warn "Type RandSeq(operator, type, length, number) with operator = 1 to get the array return!"
     end
 end
+# using DataFrames
+# include("seqidentiy.jl")
+"""
+    rand_dna_rna(length::Int64, number::Int64)
+Generate a dataframe of DNA sequences and transcripted RNAs with typed in length and number.
+"""
+function rand_dna_rna(length::Int64, number::Int64)
+    dnas = RandSeq(1, "DNA", length, number)
+    rnas = []
+    for seq in dnas
+        rseq = transcript(seq)
+        push!(rnas, rseq)
+    end
+    data = DataFrame("DNAs" => dnas, "Transcription" => rnas)
+    return data
+end
+typeof(rand_dna_rna(10,10))
