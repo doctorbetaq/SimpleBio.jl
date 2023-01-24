@@ -22,7 +22,7 @@ jobs:
         with:
           version: ${{ matrix.julia-version }}
           arch: ${{ matrix.julia-arch }}
-      - uses: julia-actions/julia-buildpkg@lstest
+      - uses: julia-actions/julia-buildpkg@latest
       - uses: julia-actions/julia-runtest@latest
 #        with:
  #         annotate: true
