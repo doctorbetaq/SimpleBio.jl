@@ -2,6 +2,7 @@ using Test
 using SimpleBio
 using BioAlignments
 using BioSequences
+using DataFrames
 
 #set test variables
 dnatest = "GAATTCGAATTC"

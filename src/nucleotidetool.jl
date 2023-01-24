@@ -1,5 +1,5 @@
-using Random
-export RandSeq
+# using Random
+export RandSeq, rand_dna_rna
 
 """
     transcript(x::String)
