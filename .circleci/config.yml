@@ -34,7 +34,7 @@ jobs:
       - checkout
       - run:
           name: Install
-          command: julia -e 'using Pkg; Pkg.update();Pkg.add("SimpleBio");Pkg.build("SimpleBio"); Pkg.test("SimpleBio")'
+          command: julia -e 'using Pkg; Pkg.update();Pkg.add(url="https://github.com/doctorbetaq/SimpleBio.jl");Pkg.build("SimpleBio"); Pkg.test("SimpleBio")'
   build2:
     working_directory: ~/SimpleBio
     docker: 
@@ -43,7 +43,7 @@ jobs:
       - checkout
       - run:
           name: Install
-          command: julia -e 'using Pkg; Pkg.update();Pkg.add("SimpleBio");Pkg.build("SimpleBio"); Pkg.test("SimpleBio")'
+          command: julia -e 'using Pkg; Pkg.update();Pkg.add(url="https://github.com/doctorbetaq/SimpleBio.jl");Pkg.build("SimpleBio"); Pkg.test("SimpleBio")'
   build3:
     working_directory: ~/SimpleBio
     docker: 
@@ -52,7 +52,7 @@ jobs:
       - checkout
       - run:
           name: Install
-          command: julia -e 'using Pkg; Pkg.update();Pkg.add("SimpleBio");Pkg.build("SimpleBio"); Pkg.test("SimpleBio")'
+          command: julia -e 'using Pkg; Pkg.update();Pkg.add(url="https://github.com/doctorbetaq/SimpleBio.jl");Pkg.build("SimpleBio"); Pkg.test("SimpleBio")'
   build4:
     working_directory: ~/SimpleBio
     docker: 
