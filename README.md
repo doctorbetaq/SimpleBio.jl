@@ -23,6 +23,7 @@ Work with biological sequences as simple as a text way!
 
 ## Tests
 SimpleBio has been tested in macos, linux and windows environments with latest julia stable release.
+
 [![test](https://img.shields.io/github/actions/workflow/status/doctorbetaq/SimpleBio.jl/test.yml?style=flat-square)](https://github.com/doctorbetaq/SimpleBio.jl/actions/workflows/test.yml)
 
 ## Install
