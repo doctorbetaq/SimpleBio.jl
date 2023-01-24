@@ -1,4 +1,4 @@
-name: Unit tests
+name: run tests
 
 on:
   - push
@@ -12,9 +12,10 @@ jobs:
       fail-fast: false
       matrix:
         julia-version:
-          - '1.6' # LTS, and `BioSequences` minimally requires Julia v1.6 for `sum` with keyword init.
-          - '1'
-        julia-arch: [x86]
+          - '1.6.7' #lts
+          - '1' #latest stable version
+          - '1.9.0-beta3' #latest pre-release version
+        julia-arch: [x86, x64]
         os: [ubuntu-latest, windows-latest, macOS-latest]
         experimental: [false]
         include:
@@ -32,5 +33,3 @@ jobs:
           version: ${{ matrix.julia-version }}
       - name: Run Tests
         uses: julia-actions/julia-runtest@latest
-      - name: Create CodeCov
-        uses: julia-actions/julia-processcoverage@v1
