@@ -18,7 +18,7 @@ Work with biological sequences as simple as a text way!
 + Retro-Transcription of RNA to DNA using RTanscript function.
 + Function RandSeq for generating DNA, RNA or amino acid chains. rand_dna_rna function to generate a dataframe for random DNAs and their transcription.
 + Use the tranlatedna function for translation of dna sequence (also can enter RNA sequence if needed) to amino acid sequence.
-    
++ Primer design tools
 #### 3. Sequence alignment with nalign (DNA or RNA) and aalign (for amino acid sequences). 
 #### 4. Outputs are text String that can be used in the further processing!
 
