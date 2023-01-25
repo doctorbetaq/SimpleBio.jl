@@ -13,6 +13,7 @@ makedocs(
         "SimpleBio" => "index.md",
         "Work with Nucleotides" =>"nts.md",
         "Sequence Alignment" => "ali.md",
+        "Primer Design" => "primer.md",
     ],
     checkdocs = :all,
         
