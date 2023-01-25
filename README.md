@@ -6,6 +6,7 @@
 [![docs](https://img.shields.io/badge/docs-dev-blue?style=flat-square)](https://doctorbetaq.github.io/SimpleBio.jl/dev/)
 [![docs](https://img.shields.io/badge/docs-stable-blue?style=flat-square)](https://doctorbetaq.github.io/SimpleBio.jl/stable/)
 [![DOI](https://zenodo.org/badge/587544290.svg)](https://zenodo.org/badge/latestdoi/587544290)
+![Stars](https://img.shields.io/github/stars/doctorbetaq/SimpleBio.jl?style=social)
 
 Work with biological sequences as simple as a text way!
 
