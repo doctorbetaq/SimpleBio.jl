@@ -41,8 +41,10 @@ module SimpleBio
             aalign,
             
         #translation
-            translatedna
+            translatedna,
 
+        #primer design
+            dnatm
     import
         BioSequences,
         BioAlignments,
@@ -59,5 +61,6 @@ module SimpleBio
     include("seqidentiy.jl")
     include("nucleotidetool.jl")
     include("translation.jl")
+    include("primer.jl")
 
 end # module SimpleBio
