@@ -1,5 +1,8 @@
-
-# using DataFrames
+"""
+    dnatm(dnaseq::String)
+Calculate the melting temperature of imput DNA sequence.
+The calculation is assume the annealing occurs under the standard conditions of 50 nM primer, 50 mM Na+, and pH 7.0.
+"""
 function dnatm(dnaseq::String)
     dna = [base for base in uppercase(dnaseq)]
     len = length(dnaseq)
