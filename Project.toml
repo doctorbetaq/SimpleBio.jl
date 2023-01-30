@@ -1,7 +1,7 @@
 name = "SimpleBio"
 uuid = "d9eea77d-fa5d-4a60-93a2-c9db3c2ebc67"
 authors = ["Hao-Han Pang <hanpang013@gmail.com>"]
-version = "0.2.0"
+version = "0.3.0"
 
 [deps]
 BioAlignments = "00701ae9-d1dc-5365-b64a-a3a3ebf5695e"
