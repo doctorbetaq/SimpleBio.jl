@@ -44,7 +44,12 @@ module SimpleBio
             translatedna,
 
         #primer design
-            dnatm
+            dnatm,
+            step_gen,
+            step_from_end,
+            multidnatm,
+            fwd_primers,
+            rev_primers
     import
         BioSequences,
         BioAlignments,

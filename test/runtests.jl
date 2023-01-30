@@ -133,7 +133,82 @@ end
 
 end
 
+@testset verbose = true "primer design tools" begin
+    @testset verbose = true "dnatm" begin
+        testdnatm = "GGAATTCC"
+        tm_result = dnatm(testdnatm)
+        @test typeof(tm_result) == DataFrame
+        @test tm_result[1,1] == testdnatm
+        @test tm_result[1,2] == 24
+    end #dnatm
+
+    @testset verbose = true "step_gen" begin
+        teststep = "ATCG"
+        stepresult = step_gen(teststep)
+        @test length(stepresult) == length(teststep)
+        @test stepresult[1] =="A"
+        @test stepresult[2] =="AT"
+        @test stepresult[3] =="ATC"
+        @test stepresult[4] =="ATCG"
+    end #step_gen
+
+    @testset verbose = true "step_from_end" begin
+        teststep = "ATCG"
+        stepresult = step_from_end(teststep)
+        @test length(stepresult) == length(teststep)-1
+        @test stepresult[1] =="CG"
+        @test stepresult[2] =="TCG"
+        @test stepresult[3] =="ATCG"
+    end #step_gen
+
+    @testset verbose = true "multidnatm" begin
+        testarr = ["GATC", "GAATTC", "GGAATTCC"]
+        result = multidnatm(testarr)
+        @test (result[1,1], result[2,1], result[3,1]) == (testarr[1], testarr[2], testarr[3])
+        @test (result[1,2], result[2,2], result[3,2]) == (12, 16, 24)
+    end
+
+    @testset verbose = true "fwd primers" begin
+        QB = "atggcaaaattagagactgttactttaggtaacat"
+        fwd = fwd_primers(QB)
+        typeof(fwd) == DataFrame
+        arr =[]
+        arrtm = []
+        for n in 1:15
+            push!(arr, fwd[n,1])
+            push!(arrtm, fwd[n,2])
+        end
+        e = length(arr)
+        for n in 1:e
+            @test dnatm(arr[n])[1,2] == arrtm[n]
+        end
+
+        fwd52 = fwd_primers(QB, 52, 53)
+        @test typeof(fwd52) == DataFrame
+        @test fwd52[1,1] == "ATGGCAAAATTAGAGACTGTTAC"
+        @test 52<=fwd52[1,2] <=53
+    end
+
+    @testset verbose = true "rev primers" begin
+        QB = "atggcaaaattagagactgttactttaggtaacat"
+        rev = rev_primers(QB)
+        typeof(rev) == DataFrame
+        arr =[]
+        arrtm = []
+        for n in 1:15
+            push!(arr, rev[n,1])
+            push!(arrtm, rev[n,2])
+
+        end
+        e = length(arr)
+        for n in 1:e
+            @test dnatm(arr[n])[1,2] == arrtm[n]
+        end
+        rev52 = rev_primers(QB, 52, 53)
+        @test typeof(rev52) == DataFrame
+        @test rev52[1,1] == "ATGTTACCTAAAGTAACAGTCTC"
+        @test 52<=rev52[1,2] <=53
+    end
+end #primer design tools
+
 end #test SimpleBio
-
-
-

@@ -36,7 +36,7 @@ function dnatm(dnaseq::String)
     DataFrame("Input DNA sequence (5'-3')" => [dnaseq], "Tm (°C)" => [tm2])
 end
 
-seq = "GAATTCGAACCT"
+# seq = "GAATTCGAACCT"
 
 """
     step_gen(seq::String)
@@ -51,9 +51,13 @@ function step_gen(seq::String)
     end
     return dnas_array
 end
-step_gen(seq)
-seq
+# step_gen(seq)
+# seq
 
+"""
+    step_from_end(seq::String)
+The reverse version of step_gen()
+"""
 function step_from_end(seq::String)
     dnas_array = [] 
     n = 1
@@ -63,7 +67,7 @@ function step_from_end(seq::String)
     end
     return dnas_array
 end
-step_from_end(seq)
+# step_from_end(seq)
 
 """
     multidnatm(dnas_array::Vector)
@@ -77,10 +81,15 @@ function multidnatm(dnas_array::Vector)
     data = DataFrame("DNA sequences  (5'-3')"=> dnas_array, "Tm" => tm_array)
     data
 end
-multidnatm(step_gen(seq))
+# multidnatm(step_gen(seq))
 
 
-seq="ATGGATTCCAAGGTTAACCGAATTCGGCAAGGAACCTTCCAAGGCCAAATGGCCAATAAGGTTAGCTAGCCTAGCCATGCAGTACCAGTTAA"
+# seq="ATGGATTCCAAGGTTAACCGAATTCGGCAAGGAACCTTCCAAGGCCAAATGGCCAATAAGGTTAGCTAGCCTAGCCATGCAGTACCAGTTAA"
+
+"""
+    fwd_primers(seq::String)
+Auto generation of foward primer candidates of an input sequence.
+"""
 function fwd_primers(seq::String)
     seq_u = uppercase(seq)
     if isdna(seq_u) == falses
@@ -99,8 +108,12 @@ function fwd_primers(seq::String)
     candidates = multidnatm(tmnew)
     return candidates
 end
-fwd_primers(seq)
+# fwd_primers(seq)
 
+"""
+    fwd_primers(seq::String, tm_low::Int64, tm_high::Int64)
+Auto generation of foward primer candidates of an input sequence in setted Tm range.
+"""
 function fwd_primers(seq::String, tm_low::Int64, tm_high::Int64)
     seq_u = uppercase(seq)
     if isdna(seq_u) == falses
@@ -119,8 +132,13 @@ function fwd_primers(seq::String, tm_low::Int64, tm_high::Int64)
     candidates = multidnatm(tmnew)
     return candidates
 end
-fwd_primers(seq, 52, 56)
+# fwd_primers(seq, 52, 56)
 
+
+"""
+    rev_primers(seq::String)
+Auto generation of foward primer candidates of an input sequence.
+"""
 function rev_primers(seq::String)
     seq_u = uppercase(seq)
     if isdna(seq_u) == falses
@@ -139,8 +157,12 @@ function rev_primers(seq::String)
     candidates = multidnatm(tmnew)
     return candidates
 end
-rev_primers(seq)
+# rev_primers(seq)
 
+"""
+    rev_primers(seq::String, tm_low::Int64, tm_high::Int64)
+Auto generation of foward primer candidates of an input sequence in setted Tm range.
+"""
 function rev_primers(seq::String, tm_low::Int64, tm_high::Int64)
     seq_u = uppercase(seq)
     if isdna(seq_u) == falses
@@ -159,5 +181,7 @@ function rev_primers(seq::String, tm_low::Int64, tm_high::Int64)
     candidates = multidnatm(tmnew)
     return candidates
 end
-rev_primers(seq, 52, 56)
+# rev_primers(seq, 52, 56)
 
+QB = "atggcaaaattagagactgttactttaggtaacatcgggaaagatggaaaacaaactctggtcctcaatccgcgtggggtaaatcccactaacggcgttgcctcgctttcacaagcgggtgcagttcctgcgctggagaagcgtgttaccgtttcggtatctcagccttctcgcaatcgtaagaactacaaggtccaggttaagatccagaacccgaccgcttgcactgcaaacggttcttgtgacccatccgttactcgccaggcgtatgctgacgtgaccttttcgttcacgcagtatagtaccgatgaggaacgagcttttgttcgtacagagcttgctgctctgctcgctagtcctctgctgatcgatgctattgatcagctgaacccagcgtat"
+rev_primers(QB, 52, 54)
