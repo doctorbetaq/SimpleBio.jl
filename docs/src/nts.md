@@ -1,7 +1,7 @@
 ```@meta
-CurrentModule = SimpleBio
+CurrentModule = ExBioHacker
 DocTestSetup = quote
-    using SimpleBio
+    using ExBioHacker
 end
 ```
 # Work with nucleotides
