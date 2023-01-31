@@ -1,5 +1,5 @@
 using Test
-using ExBioHacker
+using SimpleBio
 using BioAlignments
 using BioSequences
 using DataFrames
@@ -9,7 +9,7 @@ dnatest = "GAATTCGAATTC"
 rnatest = "GUUAGUAAGGUC"
 non = "KKYOOPKKYOOP"
 
-@testset verbose = true "ExBioHacker" begin
+@testset verbose = true "SimpleBio" begin
     @testset verbose = true "identify" begin
         @test isdna(dnatest) == true
         @test isdna(rnatest) == false
@@ -211,4 +211,4 @@ end
     end
 end #primer design tools
 
-end #test ExBioHacker
+end #test SimpleBio

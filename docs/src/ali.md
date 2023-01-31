@@ -1,7 +1,7 @@
 ```@meta
-CurrentModule = ExBioHacker
+CurrentModule = SimpleBio
 DocTestSetup = quote
-    using ExBioHacker
+    using SimpleBio
 end
 ```
 

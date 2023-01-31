@@ -1,5 +1,5 @@
-"""production
-    ExBioHacker.jl 
+"""
+    SimpleBio.jl 
     --biological sequences in simple text way!
     Package developed by doctorbetaq.
 !!This package is currently under development and testing , it is not ready for production.!!
@@ -19,7 +19,7 @@
 + outputs are text String that can be used in the further processing!
 """
 
-module ExBioHacker
+module SimpleBio
 
     
     export 
@@ -68,4 +68,4 @@ module ExBioHacker
     include("translation.jl")
     include("primer.jl")
 
-end # module ExBioHacker
+end # module SimpleBio

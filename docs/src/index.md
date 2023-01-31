@@ -1,13 +1,13 @@
-# ExBioHacker.jl
-![release](https://img.shields.io/github/v/release/doctorbetaq/ExBioHacker.jl?include_prereleases&style=flat-square)
-[![license](https://img.shields.io/github/license/doctorbetaq/ExBioHacker.jl?style=flat-square)](https://github.com/doctorbetaq/ExBioHacker.jl/blob/main/LICENSE)
-[![build](https://img.shields.io/circleci/build/github/doctorbetaq/ExBioHacker.jl/main?style=flat-square&logo=CircleCI)](https://app.circleci.com/pipelines/github/doctorbetaq/ExBioHacker.jl?branch=main)
-[![CodeCov](https://img.shields.io/codecov/c/github/doctorbetaq/ExBioHacker.jl?style=flat-square&logo=Codecov)](https://app.codecov.io/gh/doctorbetaq/ExBioHacker.jl?search=&trend=24%20hours)
-[![docs](https://img.shields.io/badge/docs-dev-blue?style=flat-square)](https://doctorbetaq.github.io/ExBioHacker.jl/dev/)
-[![docs](https://img.shields.io/badge/docs-stable-blue?style=flat-square)](https://doctorbetaq.github.io/ExBioHacker.jl/stable/)
+# SimpleBio.jl
+![release](https://img.shields.io/github/v/release/doctorbetaq/SimpleBio.jl?include_prereleases&style=flat-square)
+[![license](https://img.shields.io/github/license/doctorbetaq/SimpleBio.jl?style=flat-square)](https://github.com/doctorbetaq/SimpleBio.jl/blob/main/LICENSE)
+[![build](https://img.shields.io/circleci/build/github/doctorbetaq/SimpleBio.jl/main?style=flat-square&logo=CircleCI)](https://app.circleci.com/pipelines/github/doctorbetaq/SimpleBio.jl?branch=main)
+[![CodeCov](https://img.shields.io/codecov/c/github/doctorbetaq/SimpleBIo.jl?style=flat-square&logo=Codecov)](https://app.codecov.io/gh/doctorbetaq/SimpleBio.jl?search=&trend=24%20hours)
+[![docs](https://img.shields.io/badge/docs-dev-blue?style=flat-square)](https://doctorbetaq.github.io/SimpleBio.jl/dev/)
+[![docs](https://img.shields.io/badge/docs-stable-blue?style=flat-square)](https://doctorbetaq.github.io/SimpleBio.jl/stable/)
 [![DOI](https://zenodo.org/badge/587544290.svg)](https://zenodo.org/badge/latestdoi/587544290)
 
-Welcome to ExBioHacker.jl!
+Welcome to SimpleBio.jl!
 
 Work with biological sequences as simple as a text way!
 
@@ -25,13 +25,13 @@ Work with biological sequences as simple as a text way!
 
 
 ## Install
-To install ExBioHacker, type ']' in REPL to enter Pkg mode and type:
+To install SimpleBio, type ']' in REPL to enter Pkg mode and type:
 ```julia
-add ExBioHacker
+add SimpleBio
 ```
 
 ## Usage
-To use ExBioHacker, simply type in:
+To use SimpleBio, simply type in:
 ```julia
-using ExBioHacker
+using SimpleBio
 ```

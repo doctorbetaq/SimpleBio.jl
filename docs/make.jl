@@ -1,16 +1,16 @@
 push!(LOAD_PATH,"../src/")
 
 using Documenter
-using ExBioHacker
+using SimpleBio
 
-DocMeta.setdocmeta!(ExBioHacker, :DocTestSetup, :(using ExBioHacker); recursive=true)
+DocMeta.setdocmeta!(SimpleBio, :DocTestSetup, :(using SimpleBio); recursive=true)
 
 makedocs(
-    sitename = "ExBioHacker",
+    sitename = "SimpleBio",
     format = Documenter.HTML(),
-    modules = [ExBioHacker],
+    modules = [SimpleBio],
     pages = [
-        "ExBioHacker" => "index.md",
+        "SimpleBio" => "index.md",
         "Work with Nucleotides" =>"nts.md",
         "Sequence Alignment" => "ali.md",
         "Primer Design" => "primer.md",
@@ -23,5 +23,5 @@ makedocs(
 # See "Hosting Documentation" and deploydocs() in the Documenter manual
 # for more information.
 deploydocs(
-    repo = "github.com/doctorbetaq/ExBioHacker.jl.git",
+    repo = "github.com/doctorbetaq/SimpleBio.jl.git",
 )
